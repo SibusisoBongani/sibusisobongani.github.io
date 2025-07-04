@@ -1,0 +1,280 @@
+body {
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.icons-left,
+.icons-right {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.icons a {
+  color: #111;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+/* Remove underline line on .icons a inside project-buttons */
+.project-buttons a::after {
+  content: none;
+}
+
+.icons a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00acee;
+  transition: width 0.3s ease;
+}
+
+.icons a:hover::after {
+  width: 100%;
+}
+
+.icons a:hover {
+  color: #00acee;
+  transform: scale(1.1);
+}
+
+.icons a span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 50px 40px;
+  flex-wrap: wrap;
+}
+
+.intro-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.intro img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+  min-width: 250px;
+}
+
+.intro-text h1 {
+  font-size: 36px;
+  color: #111;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.intro-text h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #00acee;
+  margin: 10px 0;
+}
+
+/* Your original CV button style */
+.cv {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(238, 238, 238);
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+/* CV button hover */
+.cv:hover {
+  background-color: #00acee;
+  color: white;
+}
+.project-buttons a {
+  display: flex;
+  text-decoration: none;
+  padding: 0; /* remove extra padding around button */
+}
+
+.project-buttons button {
+  padding: 14px;
+  background-color: rgb(238, 238, 238);
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  min-width: 140px;  /* force same width */
+  height: 48px;      /* force same height */
+  box-sizing: border-box;
+  display: block;    /* fill the entire <a> width */
+  width: 100%;
+  text-align: center;
+
+}
+
+.project-buttons button:hover {
+  background-color: #00acee;
+  color: white;
+  
+}
+
+.edu {
+  font-family: 'Libertinus Mono', monospace;
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.education-sections {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.edu-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.edu-box h4 {
+  margin-bottom: 10px;
+  color: #00acee;
+  font-size: 18px;
+}
+
+.edu-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edu-box p {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-buttons a button {
+  min-width: 100px; /* overridden by .project-buttons button min-width 140px */
+}
+
+.footer {
+  border-top: 2px solid #00acee;
+  padding: 40px 20px;
+  background-color: #0a0a0a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-size: 14px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: #00acee;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.footer-icons a, .footer-icons i {
+  color: white;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-icons a:hover, .footer-icons i:hover {
+  color: #00acee;
+  transform: scale(1.2);
+}
